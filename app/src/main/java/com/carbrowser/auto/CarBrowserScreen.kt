@@ -97,18 +97,6 @@ class CarBrowserScreen(carContext: CarContext) : Screen(carContext) {
                 upEvent.recycle()
             }
         }
-
-        override fun onScroll(distanceX: Float, distanceY: Float) {
-            // Scroll handling if needed
-        }
-
-        override fun onFling(velocityX: Float, velocityY: Float) {
-            // Fling handling if needed
-        }
-
-        override fun onScale(focusX: Float, focusY: Float, scaleFactor: Float) {
-            // Scale handling if needed
-        }
     }
 
     init {
