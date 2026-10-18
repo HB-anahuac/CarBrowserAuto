@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootBrowserLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <!-- Top Navigation Bar for Car Screen -->
+    <LinearLayout
+        android:id="@+id/carToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:background="#1A1A1A"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:text="◀"
+            android:textColor="#FFFFFF"
+            android:background="#2E2E2E"
+            android:textSize="14sp"
+            android:layout_marginEnd="6dp"/>
+
+        <Button
+            android:id="@+id/btnForward"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:text="▶"
+            android:textColor="#FFFFFF"
+            android:background="#2E2E2E"
+            android:textSize="14sp"
+            android:layout_marginEnd="6dp"/>
+
+        <Button
+            android:id="@+id/btnReload"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:text="⟳"
+            android:textColor="#FFFFFF"
+            android:background="#2E2E2E"
+            android:textSize="16sp"
+            android:layout_marginEnd="6dp"/>
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="YouTube"
+            android:textColor="#FFFFFF"
+            android:background="#CC0000"
+            android:textSize="12sp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/etCarUrl"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:background="#2E2E2E"
+            android:textColor="#EEEEEE"
+            android:textColorHint="#888888"
+            android:hint="Escribe URL o busca..."
+            android:imeOptions="actionGo"
+            android:inputType="textUri"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:textSize="13sp"
+            android:singleLine="true"/>
+
+        <Button
+            android:id="@+id/btnToggleToolbar"
+            android:layout_width="44dp"
+            android:layout_height="40dp"
+            android:text="▲"
+            android:textColor="#FFFFFF"
+            android:background="#333333"
+            android:textSize="12sp"
+            android:layout_marginStart="6dp"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loadingBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/carToolbar"
+        android:indeterminate="false"
+        android:max="100"
+        android:visibility="gone"
+        android:progressTint="#CC0000"/>
+
+    <!-- The Web View for YouTube & Internet -->
+    <WebView
+        android:id="@+id/carWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/loadingBar" />
+
+    <!-- Container for Fullscreen HTML5 Video -->
+    <FrameLayout
+        android:id="@+id/fullscreenContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:visibility="gone" />
+
+    <!-- Small floating button to restore toolbar if hidden -->
+    <Button
+        android:id="@+id/btnShowToolbar"
+        android:layout_width="36dp"
+        android:layout_height="32dp"
+        android:text="▼"
+        android:textColor="#FFFFFF"
+        android:background="#88000000"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

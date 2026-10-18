@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CarBrowser</string>
+    <string name="default_url">https://www.youtube.com</string>
+    <string name="title_browser">Navegador para Android Auto</string>
+    <string name="btn_open_car">Iniciar en Android Auto</string>
+    <string name="status_ready">Listo para conectar con Android Auto</string>
+    <string name="help_developer_mode">Para ver esta app en la pantalla de tu coche:\n\n1. Ve a Ajustes de tu móvil y busca "Android Auto".\n2. Baja hasta el final y toca 10 veces seguidas en "Versión" para activar el Modo Desarrollador.\n3. Pulsa en el menú de 3 puntos (arriba a la derecha) -> "Ajustes de desarrollador".\n4. Activa "Fuentes desconocidas".\n5. En Android 14/15, si no aparece, instala el APK con KingInstaller.</string>
+</resources>
